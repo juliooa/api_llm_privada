@@ -1,0 +1,24 @@
+curl -X POST http://tu-ip:8001/api/chat \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: tu-api-key" \
+  -d '{
+    "model": "gemma3:1b",
+    "messages": [
+      {
+        "role": "system",
+        "content": "Eres un asistente que responde siempre con emojis"
+      },
+      {
+        "role": "user",
+        "content": "Hola, ¿cómo estás?"
+      }
+    ]
+  }'
+
+curl -X POST http://tu-ip:8001/api/email_categorize \
+  -H "Content-Type: application/json" \
+  -H "X-API-Key: tu-api-key" \
+  -d '{
+    "email": "juanalgo@gmail.com",
+        "body": "Me pongo en contacto porque desde ayer mi línea móvil no tiene señal. No puedo hacer ni recibir llamadas, y tampoco tengo acceso a los datos móviles. Ya intenté reiniciar el teléfono y sacar la SIM, pero el problema persiste.\nMi número es: 555-123-4567\nNombre completo: Juan Pérez\nDNI: 12345678\nAgradecería mucho si pudieran ayudarme lo antes posible, ya que necesito el servicio por temas laborales."
+  }'
