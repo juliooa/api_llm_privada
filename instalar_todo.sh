@@ -48,9 +48,15 @@ source venv/bin/activate
 echo "Instalando requerimientos de app..."
 execute_command "pip install -r requirements.txt"
 
+# 6.5 Copy environment file
+echo "Configurando archivo de entorno..."
+execute_command "cp .env.example .env"
+
 # 7. Display IP address and run the application
-echo "Tu api está lista, usa la ip de abajo"
-echo "IP: $(hostname -I | awk '{print $1}')"
+echo "Tu api está lista, usa la ip de tu vps y el puerto 8001 para llamarla:"
+echo "$(hostname -I | awk '{print $1}'):8001"
+echo "Usa la api key de prueba: 1111-2222-3333-4444"
+echo "Recuerda cambiarla en el archivo .env"
 echo "----------------------------------------"
 
 # 8. Run the application
