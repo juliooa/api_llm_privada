@@ -1,4 +1,7 @@
 #!/bin/bash
+# Copia todo el contenido de este archivo a un archivo dentro de tu vps
+# Dale permisos de ejecución: chmod +x instalar_todo.sh
+# Ejecuta el script: ./instalar_todo.sh
 
 # Function to execute a command and check its exit status
 execute_command() {
